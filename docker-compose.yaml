@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  flask-app:
+    container_name: flask
+    build: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongodb
+
+  mongodb:
+    container_name: mongoDB
+    build: ./mongodb
+    ports:
+      - "27017:27017"
+    command: mongod --quiet --logpath /dev/null 

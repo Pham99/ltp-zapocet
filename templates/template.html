@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+        .topnav a {
+    background-color: #858585;
+    color: black;   
+    border-radius: 10px;
+    padding: 22px;
+    text-align: right;
+    font-size: 18px;
+    text-decoration: none;
+    float: left;
+    margin-top: 12px;
+    margin-right: 12px;
+}
+.topnav a:hover {
+    text-decoration: underline;
+    background-color: white;
+    transition: 0.5s;
+}
+    </style>
+</head>
+<body style="background-color: black;">
+    <div style="background-color: #000000; height: 100px; margin-bottom: 12px;">
+        <div class="topnav">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('form') }}">Add message</a>
+        </div>
+    </div>
+    {% block main %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,15 @@
+{% extends "template.html" %}
+
+{% block title %}
+Form
+{% endblock %}
+
+{% block main %}
+<div style="text-align: center; color: whitesmoke;">
+    <form action="form" method="post">
+        <label for="message">Message:</label><br>
+        <input type="text" name="message" autocomplete="off" required><br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+{% endblock %}

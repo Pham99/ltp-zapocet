@@ -1,0 +1,17 @@
+{% extends "template.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block main %}
+<div style="display: flex; justify-content: center;">
+    <a href="{{ url_for('datasets') }}"><img src="{{ url_for('static', filename='fortune_cookie.png') }}" width="100%" height="100%" alt="fortune cookie"></a>
+</div>
+<p style="font-size: larger; text-align: center; color: whitesmoke;">
+    <b>
+        Click the cookie to get a fortune!
+    </b>
+</p>
+
+{% endblock %}
